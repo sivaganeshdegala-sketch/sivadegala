@@ -1,42 +1,13 @@
-import { GraduationCap, MapPin, Sparkles } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import { GraduationCap, MapPin } from "lucide-react";
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 relative">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Image */}
-          <div className="relative">
-            <div className="relative">
-              {/* Background decoration */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl" />
-              
-              <div className="relative bg-card rounded-3xl overflow-hidden border border-border">
-                <img
-                  src={profilePhoto}
-                  alt="Siva Ganesh Degala"
-                  className="w-full aspect-[4/5] object-cover"
-                />
-                
-                {/* Stats overlay */}
-                <div className="absolute bottom-6 left-6 right-6 bg-card/90 backdrop-blur-md rounded-2xl p-4 border border-border">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                      <Sparkles className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold text-foreground">AI & DS</p>
-                      <p className="text-sm text-muted-foreground">Specialization</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto">
 
-          {/* Right - Content */}
-          <div className="space-y-8">
+          {/* Content */}
+          <div className="space-y-8 text-center">
             <div>
               <p className="text-primary font-semibold mb-2">About Me</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -59,7 +30,7 @@ const AboutSection = () => {
             </p>
 
             {/* Info Cards */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
               <div className="bg-card p-5 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
