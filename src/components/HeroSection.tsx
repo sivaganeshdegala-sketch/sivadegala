@@ -1,4 +1,5 @@
 import { ArrowRight, Linkedin, Mail, Sparkles } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 import { useEffect, useState } from "react";
 
 const roles = [
@@ -60,9 +61,9 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Main Content */}
-          <div className="space-y-8 text-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
             {/* Status Badge */}
             <div 
               className="inline-flex items-center gap-3 glass-card px-5 py-3 rounded-full animate-fade-up"
@@ -90,7 +91,7 @@ const HeroSection = () => {
               </h1>
               
               {/* Typing Effect */}
-              <div className="h-12 flex items-center justify-center">
+              <div className="h-12 flex items-center">
                 <span className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-light">
                   {displayText}
                   <span className="inline-block w-[3px] h-8 bg-primary ml-1 animate-pulse" />
@@ -100,7 +101,7 @@ const HeroSection = () => {
 
             {/* Description */}
             <p 
-              className="text-lg text-muted-foreground max-w-2xl leading-relaxed animate-fade-up mx-auto"
+              className="text-lg text-muted-foreground max-w-xl leading-relaxed animate-fade-up"
               style={{ animationDelay: "0.3s" }}
             >
               A passionate B.Tech student exploring the world of{" "}
@@ -112,7 +113,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div 
-              className="flex flex-wrap gap-4 animate-fade-up justify-center"
+              className="flex flex-wrap gap-4 animate-fade-up"
               style={{ animationDelay: "0.4s" }}
             >
               <a
@@ -133,7 +134,7 @@ const HeroSection = () => {
 
             {/* Social Links */}
             <div 
-              className="flex items-center gap-4 pt-4 animate-fade-up justify-center"
+              className="flex items-center gap-4 pt-4 animate-fade-up"
               style={{ animationDelay: "0.5s" }}
             >
               <a
@@ -162,6 +163,68 @@ const HeroSection = () => {
                   <p className="text-xs text-muted-foreground">Write</p>
                 </div>
               </a>
+            </div>
+          </div>
+
+          {/* Right Content - Profile Image */}
+          <div className="relative flex justify-center lg:justify-end">
+            {/* Outer Glow Ring */}
+            <div 
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 lg:w-[480px] lg:h-[480px] rounded-full animate-spin-slow"
+              style={{ animationDuration: "20s" }}
+            >
+              <div className="absolute inset-0 rounded-full border border-dashed border-primary/20" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-primary rounded-full" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary/50 rounded-full" />
+            </div>
+
+            {/* Decorative Background Shape */}
+            <div 
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 lg:w-[420px] lg:h-[420px] animate-float"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <div className="w-full h-full bg-gradient-to-br from-primary via-primary/80 to-primary/60 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] opacity-90" />
+            </div>
+            
+            {/* Profile Image Container */}
+            <div 
+              className="relative z-10 animate-fade-up" 
+              style={{ animationDelay: "0.2s" }}
+            >
+              <div className="relative">
+                {/* Glassmorphic Frame */}
+                <div className="absolute -inset-3 glass-card rounded-[45%_55%_65%_35%/45%_55%_65%_45%] opacity-50" />
+                
+                {/* Main Image */}
+                <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] overflow-hidden border-4 border-background/50 shadow-2xl relative">
+                  <img
+                    src={profilePhoto}
+                    alt="Siva Ganesh Degala - AI & Data Science Student"
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+                </div>
+              </div>
+              
+              {/* Floating Badge - Year */}
+              <div className="absolute -bottom-4 -left-8 glass-card px-6 py-4 rounded-2xl shadow-xl animate-float" style={{ animationDelay: "0.5s" }}>
+                <p className="text-3xl font-bold gradient-text">1st</p>
+                <p className="text-xs text-muted-foreground font-medium">Year B.Tech</p>
+              </div>
+
+              {/* Floating Badge - Focus */}
+              <div className="absolute -top-4 -right-4 glass-card px-5 py-3 rounded-2xl shadow-xl animate-float" style={{ animationDelay: "1s" }}>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <Sparkles size={16} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">AI & DS</p>
+                    <p className="text-[10px] text-muted-foreground">Specialization</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
