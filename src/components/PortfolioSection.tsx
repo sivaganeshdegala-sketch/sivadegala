@@ -1,15 +1,16 @@
-import { ExternalLink, Calendar, Code } from "lucide-react";
+import { ExternalLink, Calendar, Code, Github } from "lucide-react";
 import doctorAppImage from "@/assets/project-doctor-appointment.jpg";
 import photographyImage from "@/assets/photography-sample.jpg";
 
 const projects = [
   {
     title: "Doctor Appointment Booking System",
-    description: "A comprehensive web application that allows patients to book appointments with doctors. Features include doctor search, appointment scheduling, and user management.",
+    description: "A C-based application that digitizes hospital appointment scheduling. Features patient registration, doctor selection with specializations (Cardiologist, Dentist, Pediatrician, Neurologist, Orthopedic, Dermatologist), appointment slot management, and booking confirmation with real-time validation.",
     image: doctorAppImage,
-    tags: ["Web Development", "Healthcare", "Scheduling"],
-    type: "Web Application",
+    tags: ["C Programming", "Healthcare", "Team Project"],
+    type: "Console Application",
     year: "2024",
+    github: "https://github.com/sivaganeshdegala-sketch",
   },
   {
     title: "Photography Portfolio",
@@ -60,9 +61,20 @@ const PortfolioSection = () => {
 
                 {/* View Button */}
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:bg-primary/90 transition-colors">
-                    <ExternalLink size={20} className="text-primary-foreground" />
-                  </button>
+                  {project.github ? (
+                    <a 
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:bg-primary/90 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)]"
+                    >
+                      <Github size={20} className="text-primary-foreground" />
+                    </a>
+                  ) : (
+                    <button className="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:bg-primary/90 hover:scale-110 transition-all duration-300 shadow-lg">
+                      <ExternalLink size={20} className="text-primary-foreground" />
+                    </button>
+                  )}
                 </div>
               </div>
 
