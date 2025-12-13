@@ -1,4 +1,4 @@
-import { ArrowRight, Linkedin, Mail, Sparkles } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, Sparkles, Github } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import { useEffect, useState } from "react";
 
@@ -134,16 +134,16 @@ const HeroSection = () => {
 
             {/* Social Links */}
             <div 
-              className="flex items-center gap-4 pt-4 animate-fade-up"
+              className="flex flex-wrap items-center gap-3 pt-4 animate-fade-up"
               style={{ animationDelay: "0.5s" }}
             >
               <a
-                href="https://www.linkedin.com/in/siva-degala-05a0b7359/"
+                href="https://www.linkedin.com/in/siva-degala-990621373"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 glass-card px-6 py-3 rounded-2xl hover:border-primary/50 transition-all duration-300"
+                className="group flex items-center gap-3 glass-card px-5 py-3 rounded-2xl hover:border-primary/50 hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)] transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
                   <Linkedin size={20} className="text-primary" />
                 </div>
                 <div className="text-left">
@@ -152,10 +152,24 @@ const HeroSection = () => {
                 </div>
               </a>
               <a
-                href="mailto:sivaganeshdegala@gmail.com"
-                className="group flex items-center gap-3 glass-card px-6 py-3 rounded-2xl hover:border-primary/50 transition-all duration-300"
+                href="https://github.com/sivaganeshdegala-sketch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 glass-card px-5 py-3 rounded-2xl hover:border-primary/50 hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)] transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
+                  <Github size={20} className="text-primary" />
+                </div>
+                <div className="text-left">
+                  <p className="text-sm font-medium text-foreground">GitHub</p>
+                  <p className="text-xs text-muted-foreground">Projects</p>
+                </div>
+              </a>
+              <a
+                href="mailto:sivaganeshdegala@gmail.com"
+                className="group flex items-center gap-3 glass-card px-5 py-3 rounded-2xl hover:border-primary/50 hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)] transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
                   <Mail size={20} className="text-primary" />
                 </div>
                 <div className="text-left">
@@ -168,63 +182,86 @@ const HeroSection = () => {
 
           {/* Right Content - Profile Image */}
           <div className="relative flex justify-center lg:justify-end">
-            {/* Outer Glow Ring */}
-            <div 
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 lg:w-[480px] lg:h-[480px] rounded-full animate-spin-slow"
-              style={{ animationDuration: "20s" }}
-            >
-              <div className="absolute inset-0 rounded-full border border-dashed border-primary/20" />
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-primary rounded-full" />
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary/50 rounded-full" />
+            {/* Animated Glow Background */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 lg:w-[420px] lg:h-[420px]">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40 rounded-full blur-3xl animate-pulse-slow" />
             </div>
 
-            {/* Decorative Background Shape */}
+            {/* Outer Rotating Ring */}
             <div 
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 lg:w-[420px] lg:h-[420px] animate-float"
-              style={{ animationDelay: "0.3s" }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 lg:w-[380px] lg:h-[380px] rounded-full animate-spin-slow"
+              style={{ animationDuration: "25s" }}
             >
-              <div className="w-full h-full bg-gradient-to-br from-primary via-primary/80 to-primary/60 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] opacity-90" />
+              <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/30" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full shadow-[0_0_20px_hsl(var(--primary))]" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-primary/60 rounded-full shadow-[0_0_15px_hsl(var(--primary)/0.6)]" />
+              <div className="absolute top-1/2 left-0 -translate-y-1/2 w-2 h-2 bg-primary/40 rounded-full" />
+              <div className="absolute top-1/2 right-0 -translate-y-1/2 w-2 h-2 bg-primary/40 rounded-full" />
+            </div>
+
+            {/* Inner Rotating Ring */}
+            <div 
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 lg:w-[340px] lg:h-[340px] rounded-full animate-spin-slow"
+              style={{ animationDuration: "15s", animationDirection: "reverse" }}
+            >
+              <div className="absolute inset-0 rounded-full border border-primary/20" />
+              <div className="absolute top-1/4 left-0 w-2 h-2 bg-primary/50 rounded-full" />
+              <div className="absolute bottom-1/4 right-0 w-2 h-2 bg-primary/50 rounded-full" />
             </div>
             
-            {/* Profile Image Container */}
+            {/* Profile Image Container - Circle */}
             <div 
               className="relative z-10 animate-fade-up" 
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="relative">
-                {/* Glassmorphic Frame */}
-                <div className="absolute -inset-3 glass-card rounded-[45%_55%_65%_35%/45%_55%_65%_45%] opacity-50" />
+              <div className="relative group">
+                {/* Glow Ring */}
+                <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-primary via-primary/60 to-primary opacity-75 blur-md group-hover:opacity-100 transition-opacity duration-500" />
                 
-                {/* Main Image */}
-                <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] overflow-hidden border-4 border-background/50 shadow-2xl relative">
+                {/* Border Ring */}
+                <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary via-primary/80 to-primary" />
+                
+                {/* Main Image - Circle */}
+                <div className="relative w-56 h-56 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl">
                   <img
                     src={profilePhoto}
                     alt="Siva Ganesh Degala - AI & Data Science Student"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
                   />
-                  {/* Overlay Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+                  {/* Shine Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </div>
               
               {/* Floating Badge - Year */}
-              <div className="absolute -bottom-4 -left-8 glass-card px-6 py-4 rounded-2xl shadow-xl animate-float" style={{ animationDelay: "0.5s" }}>
-                <p className="text-3xl font-bold gradient-text">1st</p>
-                <p className="text-xs text-muted-foreground font-medium">Year B.Tech</p>
+              <div className="absolute -bottom-2 -left-6 glass-card px-5 py-3 rounded-2xl shadow-xl animate-float hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] transition-shadow duration-300" style={{ animationDelay: "0.5s" }}>
+                <p className="text-2xl font-bold gradient-text">1st</p>
+                <p className="text-[10px] text-muted-foreground font-medium">Year B.Tech</p>
               </div>
 
               {/* Floating Badge - Focus */}
-              <div className="absolute -top-4 -right-4 glass-card px-5 py-3 rounded-2xl shadow-xl animate-float" style={{ animationDelay: "1s" }}>
+              <div className="absolute -top-2 -right-4 glass-card px-4 py-2 rounded-2xl shadow-xl animate-float hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] transition-shadow duration-300" style={{ animationDelay: "1s" }}>
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <Sparkles size={16} className="text-primary" />
+                  <div className="w-7 h-7 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <Sparkles size={14} className="text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">AI & DS</p>
-                    <p className="text-[10px] text-muted-foreground">Specialization</p>
+                    <p className="text-xs font-semibold text-foreground">AI & DS</p>
+                    <p className="text-[9px] text-muted-foreground">Specialization</p>
                   </div>
                 </div>
               </div>
+
+              {/* GitHub Badge */}
+              <a 
+                href="https://github.com/sivaganeshdegala-sketch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-1/4 -right-8 glass-card p-3 rounded-xl shadow-xl animate-float hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] hover:scale-110 transition-all duration-300 cursor-pointer" 
+                style={{ animationDelay: "1.5s" }}
+              >
+                <Github size={20} className="text-primary" />
+              </a>
             </div>
           </div>
         </div>
