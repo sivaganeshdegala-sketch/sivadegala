@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
-
 @layer base {
   :root {
     --background: 0 0% 3%;
@@ -56,6 +54,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
   }
 
   body {
@@ -87,11 +86,21 @@
   }
 
   .hover-lift {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+    @apply transition-all duration-500 hover:-translate-y-1 hover:shadow-lg;
   }
 
   .accent-border {
     @apply border-l-4 border-primary;
+  }
+
+  .interactive-card {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .interactive-card:hover {
+    transform: translateY(-6px);
+    border-color: hsl(var(--primary) / 0.48);
+    box-shadow: 0 20px 50px hsl(var(--background) / 0.7), 0 0 30px hsl(var(--primary) / 0.08);
   }
 }
 
@@ -122,6 +131,45 @@
     animation: glow 2s ease-in-out infinite alternate;
   }
 
+  .reveal-section {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 100ms; }
+  .reveal-delay-2 { transition-delay: 180ms; }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.4rem;
+    height: 2px;
+    border-radius: 999px;
+    background: hsl(var(--primary));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -144,5 +192,19 @@
   @keyframes glow {
     from { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
     to { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .reveal-section {
+      opacity: 1;
+      transform: none;
+    }
   }
 }
