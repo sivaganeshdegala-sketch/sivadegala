@@ -41,14 +41,14 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="nav-link text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 {link.name}
               </a>
             ))}
             <a
               href="#contact"
-              className="bg-primary text-primary-foreground px-6 py-2 rounded-full font-medium hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
+            className="bg-primary text-primary-foreground px-6 py-2 rounded-full font-medium hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25 active:translate-y-0 active:scale-[0.98]"
             >
               Let's Talk
             </a>
@@ -56,8 +56,10 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-foreground transition-transform duration-300 active:scale-90"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -65,7 +67,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-up">
+          <div className="md:hidden mt-4 pb-4 animate-fade-up origin-top">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
