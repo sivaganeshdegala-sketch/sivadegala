@@ -177,6 +177,32 @@ const HeroSection = () => {
                   <p className="text-xs text-muted-foreground">Write</p>
                 </div>
               </a>
+              <a
+                href="https://www.instagram.com/mr_avis/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 glass-card px-5 py-3 rounded-2xl hover:border-primary/50 hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)] transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
+                  <Instagram size={20} className="text-primary" />
+                </div>
+                <div className="text-left">
+                  <p className="text-sm font-medium text-foreground">Instagram</p>
+                  <p className="text-xs text-muted-foreground">mr_avis</p>
+                </div>
+              </a>
+              <a
+                href="tel:+919676781879"
+                className="group flex items-center gap-3 glass-card px-5 py-3 rounded-2xl hover:border-primary/50 hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)] transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
+                  <Phone size={20} className="text-primary" />
+                </div>
+                <div className="text-left">
+                  <p className="text-sm font-medium text-foreground">Phone</p>
+                  <p className="text-xs text-muted-foreground">+91 96767 81879</p>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -235,7 +261,7 @@ const HeroSection = () => {
               
               {/* Floating Badge - Year */}
               <div className="absolute -bottom-2 -left-6 glass-card px-5 py-3 rounded-2xl shadow-xl animate-float hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] transition-shadow duration-300" style={{ animationDelay: "0.5s" }}>
-                <p className="text-2xl font-bold gradient-text">1st</p>
+                <p className="text-2xl font-bold gradient-text">2nd</p>
                 <p className="text-[10px] text-muted-foreground font-medium">Year B.Tech</p>
               </div>
 
