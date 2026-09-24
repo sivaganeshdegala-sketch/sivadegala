@@ -1,4 +1,4 @@
-import { ArrowRight, Linkedin, Mail, Sparkles, Github } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, Sparkles, Github, Instagram, Phone } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import { useEffect, useState } from "react";
 
