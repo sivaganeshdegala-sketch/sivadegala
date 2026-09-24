@@ -1,4 +1,4 @@
-import { Mail, Linkedin, MapPin, Send } from "lucide-react";
+import { Mail, Linkedin, MapPin, Send, Instagram, Phone } from "lucide-react";
 import { useState } from "react";
 
 const ContactSection = () => {
@@ -48,6 +48,38 @@ const ContactSection = () => {
                     <p className="text-sm text-muted-foreground">Email</p>
                     <p className="font-medium text-foreground group-hover:text-primary transition-colors">
                       sivaganeshdegala@gmail.com
+                    </p>
+                  </div>
+                </a>
+
+                <a
+                  href="tel:+919676781879"
+                  className="flex items-center gap-4 group"
+                >
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Phone className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Phone</p>
+                    <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      +91 96767 81879
+                    </p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/mr_avis/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 group"
+                >
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Instagram className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Instagram</p>
+                    <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      mr_avis
                     </p>
                   </div>
                 </a>

@@ -7,39 +7,39 @@
 @layer base {
   :root {
     --background: 0 0% 3%;
-    --foreground: 45 20% 95%;
+    --foreground: 160 10% 95%;
 
     --card: 0 0% 6%;
-    --card-foreground: 45 20% 95%;
+    --card-foreground: 160 10% 95%;
 
     --popover: 0 0% 6%;
-    --popover-foreground: 45 20% 95%;
+    --popover-foreground: 160 10% 95%;
 
-    --primary: 45 85% 55%;
+    --primary: 158 64% 52%;
     --primary-foreground: 0 0% 5%;
 
     --secondary: 0 0% 10%;
-    --secondary-foreground: 45 20% 90%;
+    --secondary-foreground: 160 10% 90%;
 
     --muted: 0 0% 12%;
-    --muted-foreground: 45 10% 55%;
+    --muted-foreground: 160 8% 55%;
 
-    --accent: 40 90% 50%;
+    --accent: 190 85% 45%;
     --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 45 30% 20%;
-    --input: 45 20% 15%;
-    --ring: 45 85% 55%;
+    --border: 158 25% 18%;
+    --input: 158 15% 15%;
+    --ring: 158 64% 52%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(35 90% 45%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(190 85% 45%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 8%) 0%, hsl(0 0% 4%) 100%);
-    --shadow-glow: 0 0 50px hsl(45 85% 55% / 0.25);
+    --shadow-glow: 0 0 50px hsl(158 64% 52% / 0.25);
     --shadow-card: 0 10px 40px hsl(0 0% 0% / 0.6);
   }
 

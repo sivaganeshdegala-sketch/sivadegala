@@ -1,4 +1,4 @@
-import { Heart, Linkedin, Mail } from "lucide-react";
+import { Heart, Linkedin, Mail, Instagram, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,6 +27,20 @@ const Footer = () => {
               className="w-10 h-10 bg-card border border-border rounded-full flex items-center justify-center hover:border-primary/50 hover:text-primary transition-all duration-300"
             >
               <Linkedin size={18} />
+            </a>
+            <a
+              href="https://www.instagram.com/mr_avis/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-card border border-border rounded-full flex items-center justify-center hover:border-primary/50 hover:text-primary transition-all duration-300"
+            >
+              <Instagram size={18} />
+            </a>
+            <a
+              href="tel:+919676781879"
+              className="w-10 h-10 bg-card border border-border rounded-full flex items-center justify-center hover:border-primary/50 hover:text-primary transition-all duration-300"
+            >
+              <Phone size={18} />
             </a>
             <a
               href="mailto:sivaganeshdegala@gmail.com"
